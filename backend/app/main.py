@@ -11,3 +11,7 @@ def on_startup():
 
 # Include routers
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+
+@app.get("/")
+def main():
+    return {"message": "Welcome to my API"}
