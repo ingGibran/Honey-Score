@@ -19,7 +19,7 @@ function App() {
               </>
             } />
             <Route path="/movies" element={<MoviesPage />} />
-            <Route path="/featured" element={<Featured />} />
+
             {/* Add more routes as needed */}
           </Routes>
         </Layout>
