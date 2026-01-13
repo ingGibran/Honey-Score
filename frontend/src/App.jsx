@@ -4,6 +4,8 @@ import Layout from './components/Layout';
 import Hero from './components/Hero';
 import Featured from './components/Featured';
 
+import MoviesPage from './components/MoviesPage';
+
 function App() {
   return (
     <AuthProvider>
@@ -16,6 +18,7 @@ function App() {
                 <Featured />
               </>
             } />
+            <Route path="/movies" element={<MoviesPage />} />
             <Route path="/featured" element={<Featured />} />
             {/* Add more routes as needed */}
           </Routes>

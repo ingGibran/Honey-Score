@@ -12,4 +12,16 @@ def get_popular_movies():
         "page": 1
     }
     response = requests.get(url, params=params)
-    return response.json
+    return response.json()
+
+def search_movies(query: str):
+    url = f"{BASE_URL}/search/movie"
+    params = {
+        "api_key": TMDB_API_KEY,
+        "language": "en_US",
+        "query": query,
+        "page": 1,
+        "include_adult": False
+    }
+    response = requests.get(url, params=params)
+    return response.json()

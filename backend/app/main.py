@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.db.session import create_db_and_tables
-from app.routers import auth
+from app.routers import auth, movies
 
 app = FastAPI(title="KingdomScore API")
 
@@ -21,6 +21,7 @@ def on_startup():
 
 # Include routers
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(movies.router)
 
 @app.get("/")
 def main():
